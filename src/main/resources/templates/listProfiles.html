@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:if="${ not#lists.isEmpty(profiles)}" th:align="centre">
+        <h1 th:text="'List of Profiles'"></h1>
+        <table>
+            <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Phone</th>
+            </tr>
+            <tr th:each="profile : ${profiles}">
+                <td th:text="${profile.email}"></td>
+                <td th:text="${profile.name}"></td>
+                <td th:text="${profile.phone}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .button {
+            display: block;
+            width: 50%;
+            background-color: #ffffff;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color: #b40000">
+
+<a href="/"><img th:src="@{/Logo.jpg}" style="padding-top: 30px; padding-left: 30px; height: 54px; width: 205px;"></a>
+
+<div th:align="center">
+
+    <h1 style="color: white; font-size: 50px">Welcome to Traveler Profile Application</h1><br/><br/>
+    <form action="/createProfile"><input th:class="button" type="submit" value="Create Profile"></form><br/><br/>
+    <form action="/updateProfile"><input class="button" type="submit" value="Update Profile"></form><br/><br/>
+    <form action="/deleteProfile"><input class="button" type="submit" value="Delete Profile"></form><br/><br/>
+
+</div>
+
+</body>
+</html>

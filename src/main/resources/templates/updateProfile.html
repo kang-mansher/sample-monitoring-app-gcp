@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        input[type=text], select {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=email], select {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 50%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #b40000;
+            font-size: 40px;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #b40000">
+
+<a href="/"><img th:src="@{/Logo.jpg}" style="padding-top: 30px; padding-left: 30px; padding-bottom: 50px; height: 54px; width: 205px;"></a>
+
+<div th:align="center">
+
+    <h1>UPDATE PROFILE</h1>
+    <form method="POST" action="/update">
+        <b><label for="email">Email Id</label></b><br/>
+        <input type="email" id="email" name="email" placeholder="Your email address.." required><br/><br/>
+
+        <b><label for="name">Name(optional)</label></b><br/>
+        <input type="text" id="name" name="name" minlength="4" placeholder="Your name.."><br/><br/>
+
+        <b><label for="phone">Contact(optional)</label></b><br/>
+        <input type="text" id="phone" name="phone" placeholder="Your contact number.."><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</div>
+</body>
+</html>
